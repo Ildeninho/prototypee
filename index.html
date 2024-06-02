@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/css/calc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <title>Calculadora de Consumo de Energia</title>
+</head>
+<body>
+    
+    <header class="head">
+        <h1>Calculadora de Consumo de Energia</h1>
+    </header>
+    
+    <div class="container">
+        <form id="consumoForm">
+            <label for="eletrodomestico">Selecione um Eletrodoméstico:</label><br>
+            <select class="select" id="eletrodomestico" onchange="atualizarPotencia()">
+                <option value="">Selecione...</option>
+                <option value="1000">Ar-condicionado</option>
+                <option value="40">Aparelho de som</option>
+                <option value="50">Aparelho de DVD</option>
+                <option value="1000">Aspirador</option>
+                <option value="200">Batedeira</option>
+                <option value="10">Barbeador</option>
+                <option value="1000">Cafeteira</option>
+                <option value="1.5">Carregador de celular</option>
+                <option value="3500">Chuveiro</option>
+                <option value="300">Computador</option>
+                <option value="150">Exaustor</option>
+                <option value="1000">Ferro de passar roupa</option>
+                <option value="130">Freezer</option>
+                <option value="130">Geladeira</option>
+                <option value="900">Grill</option>
+                <option value="9">Lâmpada fluorescente</option>
+                <option value="40">Lâmpada incandescente</option>
+                <option value="300">Liquidificador</option>
+                <option value="350">Máquina de lavar</option>
+                <option value="1200">Microondas</option>
+                <option value="750">Sanduicheira</option>
+                <option value="1400">Secador de cabelo</option>
+                <option value="100">Televisor</option>
+                <option value="100">Telefone sem fio</option>
+                <option value="800">Torradeira</option>
+                <option value="120">Ventilador</option>
+                <option value="15">Videogame</option>
+            </select><br>
+    
+            <label for="potencia">Potência do Aparelho (W):</label><br>
+            <input type="number" id="potencia" name="potencia" required><br>
+    
+            <label for="horas">Horas de Uso por Dia:</label><br>
+            <input type="number" id="horas" name="horas" required><br>
+    
+            <label for="dias">Dias de Uso no Mês:</label><br>
+            <input type="number" id="dias" name="dias" required><br>
+    
+            <button class="but" type="button" onclick="calcularConsumo()">Calcular</button>
+        </form>
+    
+        <div id="resultado"></div>
+
+    <script src="./src/js/calc.js"></script>
+</body>
+</html>
